@@ -1,0 +1,74 @@
+/* This creates the darker red background behind the search bar and website name. */
+header {
+    background-color: #b71c1c;
+    padding-bottom: 12px;
+    position: relative;
+    
+   
+  } 
+
+/* header .row {
+    
+    background-color: transparent;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+      z-index: 1;
+  } 
+
+ .transparent {
+    background-color: transparent;
+    margin-top: 111px;
+  } */
+
+  nav .label-icon .material-icons {
+    font-size: 50px;
+}
+
+body
+{
+    background-color: #ff0000;
+    padding-bottom: 0px;
+    z-index: 1;
+  } 
+/* .class {
+    padding-bottom: 2000px;
+
+} */
+  
+  /* h1 {
+    padding: 100px 0;
+    font: 44px "Arial";
+    text-align: center;
+  } */
+  
+  /* header h1 {
+    color: white;
+  }
+  
+  /* svg {
+    position: fixed;
+    top: 0;
+    width: 100%
+    
+    
+  } */
+  
+  /* @media (max-width: 699px) {
+    .svg--lg {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .svg--sm {
+      display: none;
+    }
+  } */
+
+  /* .nav-wrapper {
+    background-color: aqua;
+    position: fixed;
+    padding-top: 1555px;
+  } */
