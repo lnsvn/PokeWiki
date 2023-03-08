@@ -1,10 +1,10 @@
 /* This creates the darker red background behind the search bar and website name. */
 header {
     background-color: #b71c1c;
+    /* background-image: url(./assets/images/Untitled.png); */
     padding-bottom: 12px;
     position: relative;
-    
-   
+    /* display: flex; */
   } 
 
 /* header .row {
@@ -28,7 +28,8 @@ header {
 
 body
 {
-    background-color: #ff0000;
+  background-color: #b71c1c;
+    /* background-color: #ff0000; */
     padding-bottom: 0px;
     z-index: 1;
   } 
@@ -72,3 +73,5 @@ body
     position: fixed;
     padding-top: 1555px;
   } */
+
+  
