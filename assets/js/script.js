@@ -1,5 +1,7 @@
+var userInput = document.getElementById("search");
+
 function getPokemon() {
-  var requestUrl = "https://pokeapi.co/api/v2/pokemon/gholdengo";
+  var requestUrl = "https://pokeapi.co/api/v2/pokemon/" + userInput.value;
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
@@ -8,5 +10,10 @@ function getPokemon() {
       console.log(data);
     });
 }
-
-getPokemon();
+userInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    getPokemon();
+    userInput.value = "";
+  }
+});
