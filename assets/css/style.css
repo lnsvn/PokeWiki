@@ -1,52 +1,74 @@
 *,
-button{
+button {
   font-family: 'Press Start 2P', cursive;
 }
 
-header{
+header {
   background-color: #b71c1c;
-  padding-bottom: 12px;
+  padding-bottom: 22px;
   position: relative;
-} 
+}
 
-.label-icon .material-icons{
+.label-icon .material-icons {
   font-size: 50px;
 }
 
-nav form{
-  position:relative;
-  top: -90px;
-  left: -90px;
+
+body {
+  background-color: #b71c1c;
 }
 
-body{
-  background-color: #b71c1c;
-  padding-bottom: 0px;
-  z-index: 1;
-} 
-
-.card-title{
+.card-title {
   font-size: 25px;
   /* background-color: #b71c1c; */
 }
-  
-  /* svg {
-    position: fixed;
-    top: 0;
-    width: 100%
-    
-    
-  } */
-  
-  /* @media (max-width: 699px) {
-    .svg--lg {
-      display: none;
-    }
-  }
-  
-  @media (min-width: 700px) {
-    .svg--sm {
-      display: none;
-    }
-  } */
 
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+/* The box shadow helps to create the white rectangle border around the info box.
+The max-width value is important! it sets the amount of red area on the sides. 
+The max-width and width values MUST BE THE SAME for container and container2! Otherwise the white border will misalign! */
+.container {
+  margin: 0 auto;
+  max-width: 2000px;
+  width: 90%;
+  background-clip: content-box;
+  box-shadow: inset 0 0 0 15px #ffffff;
+  padding: 15px;
+}
+
+/* This is the values for the curved white parts at the top and bottom of the blue information screen. */
+
+.container2 {
+  margin: 0 auto;
+  max-width: 2000px;
+  width: 90%;
+  background-clip: content-box;
+  padding-top: 0px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  display: block;
+  justify-content: center;
+}
+
+/* These are the settings for the SMALL screen. 992 was chosen because that is the threshold materialize css has. */
+@media (max-width: 992px) {
+  .svg--lg {
+    display: none;
+    
+  }
+}
+/* These are the settings for the BIG screen. 992 was chosen because that is the threshold materialize css has. */
+@media (min-width: 993px) {
+  .svg--sm {
+    display: none;
+    
+  }
+}
