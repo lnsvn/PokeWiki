@@ -10,7 +10,6 @@ function getPokemon() {
       console.log(data);
     });
 }
-<<<<<<< HEAD
 userInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
@@ -18,7 +17,6 @@ userInput.addEventListener("keypress", function (event) {
     userInput.value = "";
   }
 });
-=======
 
 getPokemon();
 
@@ -27,4 +25,3 @@ getPokemon();
 // $(document).ready(function(){
 //   $('#modal1').openModal();
 // });
->>>>>>> 74947d228108dc92ebe3b846eb8cfee3e1917a09
