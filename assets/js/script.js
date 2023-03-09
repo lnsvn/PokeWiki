@@ -10,3 +10,9 @@ function getPokemon() {
 }
 
 getPokemon();
+
+// Open Modal
+// needs fixing
+// $(document).ready(function(){
+//   $('#modal1').openModal();
+// });
