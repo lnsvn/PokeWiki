@@ -45,8 +45,3 @@ function displayPokemonInfo(data) {
   // if()
 }
 
-// Open Modal
-// needs fixing
-// $(document).ready(function(){
-//   $('#modal1').openModal();
-// });

@@ -20,9 +20,11 @@ body {
 
 .card-title {
   font-size: 25px;
-  /* background-color: #b71c1c; */
 }
 
+#pokemon-name{
+  
+}
 
 .row {
   margin-left: 0px;
