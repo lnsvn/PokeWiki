@@ -3,7 +3,7 @@ var pokeImg = document.getElementById("poke-pic");
 var pokeName = document.getElementById("pokemon-name");
 var pokeNum = document.getElementById("pokemon-number");
 var pokeTypeOne = document.getElementById("pokemon-type-1");
-var PokeTypeTwo = document.getElementById("pokemon-type-2");
+var pokeTypeTwo = document.getElementById("pokemon-type-2");
 
 function getPokemon() {
   var requestUrl =
@@ -37,11 +37,10 @@ function displayPokemonInfo(data) {
     var pokemonType2 =
       data.types[1].type.name.charAt(0).toUpperCase() +
       data.types[1].type.name.slice(1);
-    PokeTypeTwo.textContent = pokemonType2;
+    pokeTypeTwo.textContent = pokemonType2;
   } else {
-    PokeTypeTwo.textContent = " ";
+    pokeTypeTwo.textContent = " ";
   }
 
   // if()
 }
-
