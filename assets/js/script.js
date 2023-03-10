@@ -22,8 +22,3 @@ userInput.addEventListener("keypress", function (event) {
 
 function displayPokemonInfo() {}
 
-// Open Modal
-// needs fixing
-// $(document).ready(function(){
-//   $('#modal1').openModal();
-// });
