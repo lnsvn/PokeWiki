@@ -18,7 +18,9 @@ userInput.addEventListener("keypress", function (event) {
   }
 });
 
-getPokemon();
+// getPokemon();
+
+function displayPokemonInfo() {}
 
 // Open Modal
 // needs fixing
