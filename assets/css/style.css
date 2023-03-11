@@ -18,12 +18,35 @@ body {
   background-color: #b71c1c;
 }
 
+.card {
+margin: 0.5rem 0 1rem 0px;
+}
+
+
 .card-title {
   font-size: 25px;
 }
 
 #pokemon-name{
   
+}
+.card.medium {
+  height: 400px;
+}
+
+.card.small {
+  height: 213px;
+}
+
+.img1 .poke-pic {
+  width: 80%;
+  margin-bottom: 0;
+  
+}
+
+.img2 .poke-pic {
+  position: inherit;
+  width: 100%
 }
 
 .row {
@@ -64,6 +87,7 @@ svg:not(:root) {
 @media (max-width: 992px) {
   .svg--lg {
     display: none;
+    font-size: 220px;
     
   }
 }
@@ -73,4 +97,6 @@ svg:not(:root) {
     display: none;
     
   }
+
+  
 }
