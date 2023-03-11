@@ -16,6 +16,7 @@ function getPokemon() {
       console.log(data);
       wikipedia(data);
       displayPokemonInfo(data);
+<<<<<<< Updated upstream
    
     });
 }
@@ -23,6 +24,14 @@ function wikipedia(data){
   console.log(data['name'])
   var url = "https://en.wikipedia.org/w/api.php"; 
 var pokemon=data["name"];
+=======
+      wikipedia(data);
+    });
+}
+function wikipedia(data){
+  var url = "https://en.wikipedia.org/w/api.php"; 
+var pokemon=data.name();
+>>>>>>> Stashed changes
 var params = {
   action: "opensearch",
   search: pokemon + " (pokemon)",
