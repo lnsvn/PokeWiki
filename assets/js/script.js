@@ -1,10 +1,10 @@
-
 var userInput = document.getElementById("search");
 var pokeImg = document.getElementsByClassName("poke-pic");
 var pokeName = document.getElementsByClassName("pokemon-name");
 var pokeNum = document.getElementsByClassName("pokemon-number");
 var pokeTypeOne = document.getElementsByClassName("pokemon-type-1");
 var PokeTypeTwo = document.getElementsByClassName("pokemon-type-2");
+
 
 function getPokemon() {
   var requestUrl =
@@ -15,17 +15,40 @@ function getPokemon() {
     })
     .then(function (data) {
       console.log(data);
+      wikipedia(data);
       displayPokemonInfo(data);
+   
     });
+}
+function wikipedia(data){
+  console.log(data['name'])
+  var url = "https://en.wikipedia.org/w/api.php"; 
+var pokemon=data["name"];
+var params = {
+  action: "opensearch",
+  search: pokemon + " (pokemon)",
+  limit: "1",
+  namespace: "0",
+  format: "json"
+};
+
+url = url + "?origin=*";
+Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
+
+fetch(url)
+  .then(function(response){return response.json();})
+  .then(function(response) {console.log(response);})
+  .catch(function(error){console.log(error);});
+
 }
 
 userInput.addEventListener("keypress", function (event) {
-  
   if (event.key === "Enter") {
     event.preventDefault();
     getPokemon();
-    for (var i = 0 ; i < userInput.length; i++)
-    userInput[i].value = "";
+    userInput.value = "";
+    // wikipedia();
+    // wikipedia();
   }
 });
 
@@ -53,7 +76,7 @@ function displayPokemonInfo(data) {
     for (var i = 0 ; i < PokeTypeTwo.length; i++)
     PokeTypeTwo[i].textContent = "-";
   }
- 
-  // if()
+  
+  
 }
 
