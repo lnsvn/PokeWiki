@@ -4,7 +4,7 @@ var pokeName = document.getElementsByClassName("pokemon-name");
 var pokeNum = document.getElementsByClassName("pokemon-number");
 var pokeTypeOne = document.getElementsByClassName("pokemon-type-1");
 var pokeTypeTwo = document.getElementsByClassName("pokemon-type-2");
-var pokeLink = document.getElementById("wiki-link");
+var pokeLink = document.getElementsByClassName("wiki-link");
 
 function getPokemon() {
   var requestUrl =
@@ -19,6 +19,7 @@ function getPokemon() {
       displayPokemonInfo(data);
     });
 }
+
 function wikipedia(data) {
   console.log(data["name"]);
   var url = "https://en.wikipedia.org/w/api.php";
@@ -50,8 +51,11 @@ function wikipedia(data) {
 }
 
 function displayWikiLink(data) {
-  for (var i = 0; i < pokeLink.length; i++) pokeLink[i].href = data[3][0];
-  console.log(pokeLink[i].href);
+  for (var i = 0; i < pokeLink.length; i++) {
+    console.log(pokeLink);
+    pokeLink[i].href = data[3][0];
+    console.log(pokeLink[i].href);
+  }
 }
 
 userInput.addEventListener("keypress", function (event) {
