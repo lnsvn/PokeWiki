@@ -4,6 +4,7 @@ var pokeName = document.getElementsByClassName("pokemon-name");
 var pokeNum = document.getElementsByClassName("pokemon-number");
 var pokeTypeOne = document.getElementsByClassName("pokemon-type-1");
 var pokeTypeTwo = document.getElementsByClassName("pokemon-type-2");
+var pokeLink = document.getElementById("wiki-link");
 
 function getPokemon() {
   var requestUrl =
@@ -14,15 +15,49 @@ function getPokemon() {
     })
     .then(function (data) {
       console.log(data);
+      wikipedia(data);
       displayPokemonInfo(data);
     });
+}
+function wikipedia(data) {
+  console.log(data["name"]);
+  var url = "https://en.wikipedia.org/w/api.php";
+  var pokemon = data["name"];
+  var params = {
+    action: "opensearch",
+    search: pokemon + " (pokemon)",
+    limit: "1",
+    namespace: "0",
+    format: "json",
+  };
+
+  url = url + "?origin=*";
+  Object.keys(params).forEach(function (key) {
+    url += "&" + key + "=" + params[key];
+  });
+
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      displayWikiLink(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+function displayWikiLink(data) {
+  for (var i = 0; i < pokeLink.length; i++) pokeLink[i].href = data[3][0];
+  console.log(pokeLink[i].href);
 }
 
 userInput.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
     event.preventDefault();
     getPokemon();
-    //I don't think we need this for loop for the userInput.
     // for (var i = 0; i < userInput.length; i++) userInput[i].value = "";
     userInput.value = "";
   }
