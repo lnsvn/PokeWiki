@@ -36,19 +36,22 @@ function wikipedia(data) {
   Object.keys(params).forEach(function (key) {
     url += "&" + key + "=" + params[key];
   });
-
-  fetch(url)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      displayWikiLink(data);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  url = url + "?origin=*";
+  Object.keys(params).forEach(function (key) {
+    url += "&" + key + "=" + params[key];
+  });
 }
+fetch(url)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    displayWikiLink(data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 function displayWikiLink(data) {
   for (var i = 0; i < pokeLink.length; i++) {
@@ -91,6 +94,4 @@ function displayPokemonInfo(data) {
     for (var i = 0; i < pokeTypeTwo.length; i++)
       pokeTypeTwo[i].textContent = "-";
   }
-
-  // if()
 }
