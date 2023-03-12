@@ -5,6 +5,7 @@ var pokeNum = document.getElementsByClassName("pokemon-number");
 var pokeTypeOne = document.getElementsByClassName("pokemon-type-1");
 var pokeTypeTwo = document.getElementsByClassName("pokemon-type-2");
 var pokeLink = document.getElementsByClassName("wiki-link");
+var pokeDescription = document.getElementsByClassName("pokemon-description");
 
 function getPokemon() {
   var requestUrl =
@@ -20,13 +21,27 @@ function getPokemon() {
     });
 }
 
+function getPokemonDescription() {
+  var requestUrl =
+    "https://pokeapi.co/api/v2/pokemon-species/" +
+    userInput.value.toLowerCase();
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      displayPokemonDescription(data);
+    });
+}
+
 function wikipedia(data) {
   console.log(data["name"]);
   var url = "https://en.wikipedia.org/w/api.php";
   var pokemon = data["name"];
   var params = {
     action: "opensearch",
-    search: pokemon + " (pokemon)",
+    search: pokemon,
     limit: "1",
     namespace: "0",
     format: "json",
@@ -36,23 +51,19 @@ function wikipedia(data) {
   Object.keys(params).forEach(function (key) {
     url += "&" + key + "=" + params[key];
   });
-  url = url + "?origin=*";
-  Object.keys(params).forEach(function (key) {
-    url += "&" + key + "=" + params[key];
-  });
-}
-fetch(url)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-    displayWikiLink(data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
 
+  fetch(url)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      displayWikiLink(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 function displayWikiLink(data) {
   for (var i = 0; i < pokeLink.length; i++) {
     console.log(pokeLink);
@@ -62,10 +73,11 @@ function displayWikiLink(data) {
 }
 
 userInput.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
+  if (event.key === "Enter" && userInput.value === "") {
+  } else if (event.key === "Enter") {
     event.preventDefault();
     getPokemon();
-    // for (var i = 0; i < userInput.length; i++) userInput[i].value = "";
+    getPokemonDescription();
     userInput.value = "";
   }
 });
@@ -93,5 +105,19 @@ function displayPokemonInfo(data) {
   } else {
     for (var i = 0; i < pokeTypeTwo.length; i++)
       pokeTypeTwo[i].textContent = "-";
+  }
+}
+
+function displayPokemonDescription(data) {
+  for (var i = 0; i < pokeDescription.length; i++) {
+    for (var j = 0; j < data.flavor_text_entries.length; j++) {
+      if (data.flavor_text_entries[j].language.name === "en") {
+        var description = data.flavor_text_entries[j].flavor_text
+          .replace("\n", " ")
+          .replace("\f", " ");
+        break;
+      }
+    }
+    pokeDescription[i].textContent = description;
   }
 }
