@@ -42,7 +42,7 @@ body {
 .responsive-card {
   display: block;
   width: 100%;
-  overflow-x: scroll;
+  overflow-wrap: break-word;
 }
 
 .row {
@@ -74,21 +74,41 @@ The max-width and width values MUST BE THE SAME for container and container2! Ot
 }
 
 svg:not(:root) {
-  overflow: hidden;
+  overflow: wrap;
   display: block;
   justify-content: center;
 }
+
+
 
 /* These are the settings for the SMALL screen. 992 was chosen because that is the threshold materialize css has. */
 @media (max-width: 992px) {
   .svg--lg {
     display: none;
-    font-size: 220px;
   }
+  
+  h5  {
+    font-size:  4vw; 
+    line-height: 110%;
+  }
+
+
 }
 /* These are the settings for the BIG screen. 992 was chosen because that is the threshold materialize css has. */
 @media (min-width: 993px) {
   .svg--sm {
-    display: none;
+    display: none;    
   }
+
+  h5  {
+    font-size:  2vw; 
+    line-height: 110%;
+  }
+
+
 }
+
+
+
+
+
