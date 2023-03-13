@@ -39,6 +39,12 @@ body {
   width: 100%;
 }
 
+.responsive-card {
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+}
+
 .row {
   margin-left: 0px;
   margin-right: 0px;
