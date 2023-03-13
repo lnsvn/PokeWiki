@@ -21,12 +21,6 @@ body {
   margin: 0.5rem 0 1rem 0px;
 }
 
-.card-title {
-  font-size: 25px;
-}
-
-#pokemon-name {
-}
 .card.medium {
   height: 400px;
 }
@@ -36,7 +30,7 @@ body {
 }
 
 .img1 .poke-pic {
-  width: 80%;
+  width: 110%;
   margin-bottom: 0;
 }
 

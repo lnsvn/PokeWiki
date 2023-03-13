@@ -244,18 +244,28 @@
     </div>
 
 
-    <!-- This is the search bar. -->
+    
     <div class="row">
-      <nav class="transparent z-depth-0">
-        <div class="nav-wrapper ">
-          <form>
-            <div class="input-field col s8 offset-s2">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            </div>
-          </form>
+      <div class="col s12">
+
+        <!-- Button to generate random Pokémon -->
+        <div class="col s3">
+          <a id="gen-poke-btn" class="waves-effect waves-light btn black-text">generate pokémon</a>
         </div>
-      </nav>
+
+        <!-- The search bar -->
+        <nav class="transparent z-depth-0">
+          <div class="nav-wrapper ">
+            <form>
+              <div class="input-field col s6">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              </div>
+            </form>
+          </div>
+        </nav>
+
+      </div>
     </div>
 
   </header>
@@ -314,21 +324,30 @@
   <!-- Main Container for large screen -->
   <main class="container blue accent-1 hide-on-med-and-down truncate">
 
-    <!-- Description Card -->
+    <!-- Name Card -->
     <div class="row">
       <div class="col s4">
         <!-- Pokémon image/sprite -->
-        <div class="card medium blue accent-1 z-depth-0 truncate center-align">
+        <div class="card medium blue accent-1 z-depth-0 center-align">
           <div class="img1">
             <img class="poke-pic">
           </div>
         </div>
+        <!-- Add to Favorites Button -->
+        <div class="col s2">
+          <a id="add-fav-btn" class="waves-effect waves-light btn btn-floating amber darken-1 black-text"><i class="material-icons left">favorite_border</i></a>
+        </div>
+        <!-- View Favorites Button -->
+        <div class="col 4 offset-s3">
+          <a id="view-favs-btn" class="waves-effect waves-light btn black-text yellow lighten-2"><i class="material-icons right">favorite_border</i>view </a>
+        </div>
       </div>
+
       <div class="col s8">
 
         <div id="description-card" class="card white">
           <div class="card-content blue lighten-4 black-text z-depth-0 truncate center-align">
-            <span class="pokemon-name" class="card-title">Name</span>
+            <h5 class="pokemon-name" class="card-title">Name</h5>
           </div>
         </div>
 
@@ -337,7 +356,7 @@
         <div class="col s4">
           <div id="number-card" class="card white">
             <div class="card-content light-green accent-1 z-depth-1 black-text truncate center-align">
-              <span class="pokemon-number" class="card-title">#</span>
+              <h5 class="pokemon-number" class="card-title">#</h5>
             </div>
           </div>
         </div>
@@ -345,7 +364,7 @@
         <div class="col s4">
           <div id="type-card-1" class="card white">
             <div class="card-content black-text z-depth-0 truncate center-align">
-              <span class="pokemon-type-1" class="card-title">Type 1</span>
+              <h5 class="pokemon-type-1" class="card-title">Type 1</h5>
             </div>
           </div>
         </div>
@@ -353,7 +372,7 @@
         <div class="col s4">
           <div id="type-card-2" class="card white">
             <div class="card-content black-text z-depth-0 truncate center-align">
-              <span class="pokemon-type-2" class="card-title">Type 2</span>
+              <h5 class="pokemon-type-2" class="card-title">Type 2</h5>
             </div>
           </div>
         </div>
@@ -365,16 +384,24 @@
       <div class="col s8 ">
         <div id="wiki-card" class="card white">
           <div class="card small card-content grey lighten-2 z-depth-0 black-text truncate">
-
-            <span class="pokemon-description">Description</span>
-            <!-- <span id="wiki-title" class="card-title">Wiki Page</span> -->
+            <h5 class="pokemon-description">Description</h5>
             <div id="wiki-site"><a class = "wiki-link" href="" target = "_blank">Click here to learn more!</a></div>
           </div>
         </div>
       </div>
+
     </div>
-    </div>
-    </div>
+
+    <div class="row">
+      <div class="col s12">
+        
+        
+
+        
+
+      </div>
+    </div> 
+    
   </main>
 
   <!-- Main Container for small screen -->
@@ -385,7 +412,7 @@
       <div class="col s4 ">
         <div id="number-card" class="card white">
           <div class="card-content light-green accent-1 z-depth-2 black-text truncate center-align">
-            <span class="pokemon-number" class="card-title"># </span>
+            <h5 class="pokemon-number" class="card-title"># </h5>
           </div>
         </div>
       </div>
@@ -401,7 +428,7 @@
       <div class="col s12  ">
         <div id="description-card" class="card white">
           <div class="card-content blue lighten-4 black-text z-depth-0 truncate center-align">
-            <span class="pokemon-name" class="card-title">Name</span>
+            <h5 class="pokemon-name" class="card-title">Name</h5>
           </div>
         </div>
       </div>
@@ -412,7 +439,7 @@
       <div class="col s6 ">
         <div id="type-card-1" class="card white">
           <div class="card-content black-text truncate center-align">
-            <span class="pokemon-type-1" class="card-title">Type1</span>
+            <h5 class="pokemon-type-1" class="card-title">Type1</h5>
           </div>
         </div>
       </div>
@@ -422,7 +449,7 @@
       <div class="col s6 ">
         <div id="type-card-2" class="card white">
           <div class="card-content black-text truncate center-align">
-            <span class="pokemon-type-2" class="card-title">Type2</span>
+            <h5 class="pokemon-type-2" class="card-title">Type2</h5>
           </div>
         </div>
       </div>
@@ -433,7 +460,7 @@
       <div class="col s12">
         <div id="wiki-card" class="card white">
           <div class="card-content grey lighten-2 z-depth-0 black-text truncate">
-            <span class="pokemon-description">Description</span>
+            <h5 class="pokemon-description">Description</h5>
             <!-- <span id="wiki-title" class="card-title">Wiki Page</span> -->
             <div id="wiki-site"><a class = "wiki-link" href="" target = "_blank">Click here to learn more!</a></div>
             </div>
@@ -441,6 +468,16 @@
         </div>
       </div>
     </div>
+
+    <!-- Add to Favorites Button -->
+    <div class="col s12">
+      <a id="add-fav-btn" class="waves-effect waves-light btn btn-floating amber darken-1 black-text"><i class="material-icons left">favorite_border</i></a>
+    </div>
+    <!-- View Favorites Button -->
+    <div class="col 12">
+      <a id="view-favs-btn" class="waves-effect waves-light btn black-text yellow lighten-2"><i class="material-icons right">favorite_border</i>view </a>
+    </div>
+  </div>
 
   </main>
 
