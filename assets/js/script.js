@@ -8,6 +8,7 @@ var pokeLink = document.getElementsByClassName("wiki-link");
 var pokeDescription = document.getElementsByClassName("pokemon-description");
 var savePokemon = document.getElementsByClassName("add-fav");
 var viewFavoritePokemon = document.getElementsByClassName("view-fav");
+var pokeRandom = document.getElementById("gen-poke-btn");
 
 function getPokemon() {
   var requestUrl =
@@ -179,3 +180,7 @@ function getFavoritePokemonDescription(favPkmn) {
       displayPokemonDescription(data);
     });
 }
+
+// Random number generator
+<button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)">Click Me</button>
+
