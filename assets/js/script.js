@@ -8,6 +8,7 @@ var pokeLink = document.getElementsByClassName("wiki-link");
 var pokeDescription = document.getElementsByClassName("pokemon-description");
 var savePokemon = document.getElementsByClassName("add-fav");
 var viewFavoritePokemon = document.getElementsByClassName("view-fav");
+var pokeRandom = document.getElementById("gen-poke-btn");
 
 function getPokemon() {
   var requestUrl =
@@ -179,3 +180,17 @@ function getFavoritePokemonDescription(favPkmn) {
       displayPokemonDescription(data);
     });
 }
+
+// Random pokemon button
+
+pokeRandom.addEventListener("click", function () {
+
+rng = Math.floor((Math.random() * 900) + 1);
+  console.log(rng)
+  userInput.value = rng
+  getPokemon();
+  getPokemonDescription();
+ 
+});
+ 
+ 

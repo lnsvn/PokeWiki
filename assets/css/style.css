@@ -13,6 +13,8 @@ header {
   font-size: 50px;
 }
 
+
+
 body {
   background-color: #b71c1c;
 }
@@ -99,7 +101,7 @@ svg:not(:root) {
 
 
 .card .card-content {
-  padding: 27px;
+  padding-top: 27px;
   border-radius: 0 0 2px 2px;
 }
 
@@ -110,7 +112,13 @@ svg:not(:root) {
   padding: 0px 23px;
   margin: 12px;
 }
-
+#centerbuttons .row .col {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 4px;
+  min-height: 1px;
+}
 
 /* These are the settings for the SMALL screen. 992 was chosen because that is the threshold materialize css has. */
 @media (max-width: 992px) {
@@ -123,7 +131,10 @@ svg:not(:root) {
     font-size: larger
       }
 
-
+.btn-large i {
+  font-size: 30px;
+  margin: 0%;
+}
 
   h5  {
     font-size:  4vw; 
@@ -147,7 +158,10 @@ display: flex;
     font-size:  2vw; 
     line-height: 110%;
   }
-
+  .btn-large i {
+    font-size: 2vw;
+    margin: 0%;
+  }
 
 }
 
