@@ -181,6 +181,16 @@ function getFavoritePokemonDescription(favPkmn) {
     });
 }
 
-// Random number generator
-<button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,10)">Click Me</button>
+// Random pokemon button
 
+pokeRandom.addEventListener("click", function () {
+
+rng = Math.floor((Math.random() * 900) + 1);
+  console.log(rng)
+  userInput.value = rng
+  getPokemon();
+  getPokemonDescription();
+ 
+});
+ 
+ 
