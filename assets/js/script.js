@@ -14,6 +14,12 @@ function getPokemon() {
     "https://pokeapi.co/api/v2/pokemon/" + userInput.value.toLowerCase();
   fetch(requestUrl)
     .then(function (response) {
+      if (response.status === 404) {
+        console.log("error");
+        for (var i = 0; i < pokeName.length; i++) {
+          pokeName[i].textContent = "No Pokemon By That Name or Num";
+        }
+      }
       return response.json();
     })
     .then(function (data) {
@@ -135,6 +141,7 @@ for (var i = 0; i < viewFavoritePokemon.length; i++) {
     var favPkmn = localStorage.getItem("favPkmn");
     console.log(favPkmn);
     getFavoritePokemon(favPkmn);
+    getFavoritePokemonDescription(favPkmn);
   });
 }
 
@@ -148,5 +155,18 @@ function getFavoritePokemon(favPkmn) {
       console.log(data);
       wikipedia(data);
       displayPokemonInfo(data);
+    });
+}
+
+function getFavoritePokemonDescription(favPkmn) {
+  var requestUrl =
+    "https://pokeapi.co/api/v2/pokemon-species/" + favPkmn.toLowerCase();
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      displayPokemonDescription(data);
     });
 }
