@@ -249,8 +249,8 @@
       <div class="col s12">
 
         <!-- Button to generate random Pokémon -->
-        <div class="col s3">
-          <a id="gen-poke-btn" class="waves-effect waves-light btn black-text">generate pokémon</a>
+        <div class="col s3 hide-on-med-and-down">
+          <a id="gen-poke-btn" class="waves-effect waves-light teal lighten-3 btn-large black-text">random</a>
         </div>
 
         <!-- The search bar -->
@@ -383,24 +383,16 @@
 
       <div class="col s8 ">
         <div id="wiki-card" class="card white">
-          <div class="card small card-content grey lighten-2 z-depth-0 black-text truncate">
-            <h5 class="pokemon-description">Description</h5>
-            <div id="wiki-site"><a class = "wiki-link" href="" target = "_blank">Click here to learn more!</a></div>
+          <div class="card small card-content grey lighten-2 z-depth-0 black-text">
+            <div class="responsive-card">
+              <h5 class="pokemon-description">Description<h5>
+              <div id="wiki-site"><a class = "wiki-link" href="" target = "_blank">Click here to learn more!</a></div>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
-
-    <div class="row">
-      <div class="col s12">
-        
-        
-
-        
-
-      </div>
-    </div> 
     
   </main>
 
@@ -415,6 +407,9 @@
             <h5 class="pokemon-number" class="card-title"># </h5>
           </div>
         </div>
+      </div>
+      <div class="col s2 offset-s2 hide-on-large-only">
+        <a id="gen-poke-btn" class="waves-effect waves-light btn-large teal lighten-3 black-text">random</a>
       </div>
     </div>
 
@@ -471,11 +466,11 @@
 
     <!-- Add to Favorites Button -->
     <div class="col s12">
-      <a id="add-fav-btn" class="waves-effect waves-light btn btn-floating amber darken-1 black-text add-fav"><i class="material-icons left">favorite_border</i></a>
+      <a id="add-fav-btn" class="waves-effect waves-light btn btn-floating amber darken-1 black-text"><i class="material-icons left">favorite_border</i></a>
     </div>
     <!-- View Favorites Button -->
     <div class="col 12">
-      <a id="view-favs-btn" class="waves-effect waves-light btn black-text yellow lighten-2 view-fav"><i class="material-icons right">favorite_border</i>view </a>
+      <a id="view-favs-btn" class="waves-effect waves-light btn black-text yellow lighten-2"><i class="material-icons right">favorite_border</i>view </a>
     </div>
   </div>
 
