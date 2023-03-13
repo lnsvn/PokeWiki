@@ -17,7 +17,13 @@ function getPokemon() {
       if (response.status === 404) {
         console.log("error");
         for (var i = 0; i < pokeName.length; i++) {
-          pokeName[i].textContent = "No Pokemon By That Name or Num";
+          pokeName[i].textContent = "No Pokemon Found";
+          pokeImg[i].src = "";
+          pokeNum[i].textContent = "";
+          pokeTypeOne[i].textContent = "";
+          pokeTypeTwo[i].textContent ="";
+          pokeDescription[i].textContent = "Try a different name or number...";
+          pokeLink[i].textContent = "";
         }
       }
       return response.json();
@@ -98,6 +104,9 @@ function displayPokemonInfo(data) {
       data.name.charAt(0).toUpperCase() + data.name.slice(1);
   for (var i = 0; i < pokeNum.length; i++)
     pokeNum[i].textContent = "#" + data.id;
+  for (var i = 0; i < pokeNum.length; i++)
+    pokeLink[i].textContent = "Click here to learn more!";
+
 
   var pokemonType1 =
     data.types[0].type.name.charAt(0).toUpperCase() +
