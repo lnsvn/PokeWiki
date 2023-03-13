@@ -6,6 +6,8 @@ var pokeTypeOne = document.getElementsByClassName("pokemon-type-1");
 var pokeTypeTwo = document.getElementsByClassName("pokemon-type-2");
 var pokeLink = document.getElementsByClassName("wiki-link");
 var pokeDescription = document.getElementsByClassName("pokemon-description");
+var savePokemon = document.getElementsByClassName("add-fav");
+var viewFavoritePokemon = document.getElementsByClassName("view-fav");
 
 function getPokemon() {
   var requestUrl =
@@ -120,4 +122,31 @@ function displayPokemonDescription(data) {
     }
     pokeDescription[i].textContent = description;
   }
+}
+
+for (var i = 0; i < savePokemon.length; i++) {
+  savePokemon[i].addEventListener("click", function () {
+    localStorage.setItem("favPkmn", pokeName[0].textContent);
+  });
+}
+
+for (var i = 0; i < viewFavoritePokemon.length; i++) {
+  viewFavoritePokemon[i].addEventListener("click", function () {
+    var favPkmn = localStorage.getItem("favPkmn");
+    console.log(favPkmn);
+    getFavoritePokemon(favPkmn);
+  });
+}
+
+function getFavoritePokemon(favPkmn) {
+  var requestUrl = "https://pokeapi.co/api/v2/pokemon/" + favPkmn.toLowerCase();
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      wikipedia(data);
+      displayPokemonInfo(data);
+    });
 }
