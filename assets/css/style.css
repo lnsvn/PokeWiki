@@ -26,7 +26,7 @@ body {
 }
 
 .card.small {
-  height: 213px;
+  height: 154px;
 }
 
 .img1 .poke-pic {
@@ -96,7 +96,7 @@ svg:not(:root) {
 
 
 .card .card-content {
-  padding: 22px;
+  padding: 27px;
   border-radius: 0 0 2px 2px;
 }
 
