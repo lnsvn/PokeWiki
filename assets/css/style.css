@@ -130,7 +130,10 @@ svg:not(:root) {
     line-height: 110%;
   }
 
+.movebuttons{
+display: flex;
 
+}
 }
 /* These are the settings for the BIG screen. 992 was chosen because that is the threshold materialize css has. */
 @media (min-width: 993px) {
