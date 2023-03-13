@@ -26,7 +26,7 @@ body {
 }
 
 .card.small {
-  height: 154px;
+  height: 20%;
 }
 
 .img1 .poke-pic {
@@ -55,21 +55,23 @@ body {
 The max-width value is important! it sets the amount of red area on the sides. 
 The max-width and width values MUST BE THE SAME for container and container2! Otherwise the white border will misalign! */
 .container {
-  margin: 0 auto;
+  margin: auto;
   max-width: 2000px;
   width: 90%;
   background-clip: content-box;
-  box-shadow: inset 0 0 0 15px #ffffff;
+  box-shadow: inset 0 0 0 17px #ffffff;
   padding: 15px;
+  margin-top: -1px;
 }
 
 /* This is the values for the curved white parts at the top and bottom of the blue information screen. */
 
 .container2 {
-  margin: 0 auto;
+  margin: auto;
   max-width: 2000px;
   width: 90%;
   background-clip: content-box;
+  
   padding-top: 0px;
 }
 
@@ -77,6 +79,7 @@ svg:not(:root) {
   
   display: block;
   justify-content: center;
+  margin-top: -2px;
 }
 
 .p {
@@ -115,6 +118,13 @@ svg:not(:root) {
     display: none;
   }
   
+  
+  p{
+    font-size: larger
+      }
+
+
+
   h5  {
     font-size:  4vw; 
     line-height: 110%;
@@ -127,7 +137,9 @@ svg:not(:root) {
   .svg--sm {
     display: none;    
   }
-
+  p{
+    font-size: larger
+      }
   h5  {
     font-size:  2vw; 
     line-height: 110%;

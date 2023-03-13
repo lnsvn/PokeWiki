@@ -248,10 +248,10 @@
     <div class="row">
       <div class="col s12">
 
-        
 
 
-        
+
+
 
       </div>
     </div>
@@ -309,44 +309,50 @@
   </div>
 
 
- 
- <!-- The search bar -->
- 
- <main class="container ">
- <nav class="white z-depth-0 ">
-  <div class="nav-wrapper ">
-    <form>
-      <div class="input-field col s6">
-        <input id="search" placeholder="   Search a Pokemon Name or Number!" type="search" required>
-        <label class="label-icon " for="search"><i class="material-icons large black-text">search</i></label>
+
+  <!-- The search bar -->
+
+  <main class="container ">
+    <div class="row white">
+      <nav class="white z-depth-0 col s8">
+        <div class="nav-wrapper ">
+          <form>
+            <div class="input-field ">
+              <input id="search" placeholder="   Search!" type="search" required>
+              <label class="label-icon " for="search"><i class="material-icons large black-text">search</i></label>
+            </div>
+          </form>
+        </div>
+      </nav>
+      <!-- Button to generate random Pokémon -->
+      <div class="white col s1 ">
+        <a id="gen-poke-btn" class="waves-effect waves-light red  btn-large black-text"><i
+            class="large material-icons">casino</i></a>
       </div>
-    </form>
-  </div>
-</nav>
-</main>
+
+      <!-- Add to Favorites Button -->
+      <div class="col s1 ">
+        <a id="add-fav-btn" class="waves-effect waves-light btn btn-large  yellow black-text add-fav"><i
+            class="material-icons ">file_download</i></a>
+      </div>
+      <!-- View Favorites Button -->
+      <div class="col s1">
+        <a id="view-favs-btn" class="waves-effect waves-light btn black-text btn-large green lighten-2 view-fav"><i
+            class="material-icons ">file_upload</i></a>
+      </div>
+
+    </div>
+
+  </main>
 
 
- <!-- Main Container for large screen -->
+  <!-- Main Container for large screen -->
 
   <main class="container blue accent-1 hide-on-med-and-down truncate">
 
-    
-    <div class="row">
-      <!-- Add to Favorites Button -->
-      <div class="col s2 ">
-        <a id="add-fav-btn" class="waves-effect waves-light btn btn-large  amber darken-1 black-text add-fav"><i
-            class="material-icons ">favorite</i><i class="material-icons ">file_download</i></a>
-      </div>
-      <!-- View Favorites Button -->
-      <div class="col s2">
-        <a id="view-favs-btn" class="waves-effect waves-light btn black-text btn-large yellow lighten-2 view-fav"><i
-            class="material-icons ">favorite_border</i> view </a>
-      </div>
-      <!-- Button to generate random Pokémon -->
-      <div class="col s6 hide-on-med-and-down right">
-        <a id="gen-poke-btn" class="waves-effect waves-light teal lighten-3 btn-large black-text"><i
-            class="material-icons ">favorite</i> get random </a>
-      </div>
+
+
+
     </div>
     <!-- Name Card -->
     <div class="row">
@@ -402,17 +408,19 @@
         <div id="wiki-card" class="card white">
           <div class="card small card-content grey lighten-2 z-depth-0 black-text">
             <div class="responsive-card">
-              <p class="pokemon-description">
-              <p>
+              <p class="pokemon-description">Type a Pokémon's name or number into the search to learn more about them.
+                Roll the dice to get a random Pokemon! Bookmark your favorite with the yellow button, and view it with
+                the green button!
+
               <div id="wiki-site"><a class="wiki-link" href="" target="_blank"></a></div>
-              </p>
+
               </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     </div>
     </div>
   </main>
@@ -429,9 +437,7 @@
           </div>
         </div>
       </div>
-      <div class="col s2 ">
-        <a id="gen-poke-btn" class="waves-effect waves-light btn-large teal lighten-3 black-text ">random</a>
-      </div>
+
     </div>
 
     <!-- Pokémon image/sprite -->
@@ -476,26 +482,21 @@
       <div class="col s12">
         <div id="wiki-card" class="card white">
           <div class="card-content grey lighten-2 z-depth-0 black-text truncate">
-            <h5 class="pokemon-description"></h5>
+            <p class="pokemon-description">Type a Pokémon's name or number into the search to learn more about them.
+              Roll the dice to get a random Pokemon! Bookmark your favorite with the yellow button, and view it with
+              the green button!
             <!-- <span id="wiki-title" class="card-title">Wiki Page</span> -->
             <div id="wiki-site"><a class="wiki-link" href="" target="_blank"></a></div>
           </div>
         </div>
       </div>
     </div>
-    </div>
+    
 
-    <!-- Add to Favorites Button -->
-    <div class="col s12">
-      <a id="add-fav-btn" class="waves-effect waves-light btn btn-floating amber darken-1 black-text"><i
-          class="material-icons left">favorite_border</i></a>
-    </div>
-    <!-- View Favorites Button -->
-    <div class="col 12">
-      <a id="view-favs-btn" class="waves-effect waves-light btn black-text yellow lighten-2"><i
-          class="material-icons right">favorite_border</i>view </a>
-    </div>
-    </div>
+    
+
+
+    
 
   </main>
 
