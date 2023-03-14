@@ -32,8 +32,9 @@ body {
 }
 
 .img1 .poke-pic {
-  width: 80%;
+  width: 75%;
   margin-bottom: 0;
+
 }
 
 .img2 .poke-pic {
@@ -73,22 +74,22 @@ The max-width and width values MUST BE THE SAME for container and container2! Ot
   max-width: 2000px;
   width: 90%;
   background-clip: content-box;
-  
+
   padding-top: 0px;
 }
 
 svg:not(:root) {
-  
+
   display: block;
   justify-content: center;
   margin-top: -2px;
 }
 
 .p {
-  
+
   display: block;
   width: auto;
-  
+
 
 }
 
@@ -112,6 +113,7 @@ svg:not(:root) {
   padding: 0px 23px;
   margin: 12px;
 }
+
 #centerbuttons .row .col {
   float: left;
   -webkit-box-sizing: border-box;
@@ -125,47 +127,50 @@ svg:not(:root) {
   .svg--lg {
     display: none;
   }
-  
-  
-  p{
-    font-size: larger
-      }
 
-.btn-large i {
-  font-size: 30px;
-  margin: 0%;
-}
-
-  h5  {
-    font-size:  4vw; 
-    line-height: 110%;
+  .card .card-content {
+    padding: 12px;
+    border-radius: 0 0 2px 2px;
   }
 
-.movebuttons{
-display: flex;
+  p {
+    font-size: larger
+  }
 
+  .btn-large i {
+    font-size: 30px;
+    margin: 0%;
+  }
+
+  h5 {
+    font-size: 4vw;
+    line-height: 1%;
+  }
+
+  .movebuttons {
+    display: flex;
+
+  }
 }
-}
+
 /* These are the settings for the BIG screen. 992 was chosen because that is the threshold materialize css has. */
 @media (min-width: 993px) {
   .svg--sm {
-    display: none;    
+    display: none;
   }
-  p{
+
+  p {
     font-size: larger
-      }
-  h5  {
-    font-size:  2vw; 
+  }
+
+  h5 {
+    font-size: 2vw;
     line-height: 110%;
   }
+
   .btn-large i {
     font-size: 2vw;
     margin: 0%;
   }
 
 }
-
-
-
-
-
