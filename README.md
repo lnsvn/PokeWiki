@@ -4,6 +4,10 @@
 
 PokéWiki is a web application developed by Team JSONs. This site is a Pokémon search engine designed to have a similar look and feel to the Pokémon TV show and games. Search for any Pokémon in the Pokédex by typing its name or number into the search. Then, you will be presented with the presented with the Pokémon's name, sprite, number, and types. Additionally, you can see a short description and a link to a Wikipedia page if you would like to learn more. There is also a feature to bookmark and load your favorite Pokémon, and a feature that give you a random Pokémon from the database. 
 
+## Link to the Application
+
+https://tcunningham203.github.io/Etsy-Pokedex/
+
 ## Table of Contents
 - [Visuals](#visuals)
 - [Usage](#usage)
