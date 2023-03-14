@@ -62,10 +62,14 @@ Wikipedia API for link in description box
 Team JSONs is composed of 4 collaborators. 
 
 Tim Cunningham: HTML, CSS, Readme, Vector Drawings, Random Pokemon Function 
+https://github.com/tcunningham203
 
 Lauren Sullivan: HTML, CSS, Materialize CSS
+https://github.com/lnsvn
 
 Frank Olmsted: Javascript, PokeAPI work
+https://github.com/frankolms
 
 Sami Saqib: Javascript, WikiAPI work
+https://github.com/SamiSaqib10
 
