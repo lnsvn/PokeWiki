@@ -18,8 +18,8 @@ https://tcunningham203.github.io/Etsy-Pokedex/
 
 The CSS for the header and white screen border was created using vector drawings. This allows the drawings to scale infinitely with screen sizes without losing quality. The area within the blue screen area, as well as the buttons, was created with the help of Materialize CSS. However, because the look of the website is very deliberate and going for a specific style, we had to write a lot of custom CSS to alter the Materialize CSS to do what we wanted. The website also changes based on various screen sizes- when the site becomes smaller, the header is altered and the logo's position is changed. The three buttons near the search bar are moved in a row below the search bar. Lastly, the information in the blue box is moved around to fit for a veritcal orientation. 
 
-![AppScreenshot1](/assets/screenshots/WEBSITE-SCREENSHOT0.png?raw=true "Screenshot of Deployed Application- Instruction Screen")
-![AppScreenshot2](/assets/screenshots/WEBSITE-SCREENSHOT.png?raw=true "Screenshot of Deployed Application- Results Screen")
+![AppScreenshot1](/assets/screenshots/WEBSITE-SCREENSHOT2.png?raw=true "Screenshot of Deployed Application- Instruction Screen")
+![AppScreenshot2](/assets/screenshots/WEBSITE-SCREENSHOT3.png?raw=true "Screenshot of Deployed Application- Results Screen")
 
 ## Usage
 When you load up the site, the instructions for the user are available in the description box.
