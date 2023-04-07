@@ -28,9 +28,9 @@ As the instructions say, if you know the name of a Pokémon or its number you ca
 
 The Pokémon's info is then displayed. Additonally, a link is provided that gives additional information about the etymology of the Pokémon, as well as its appearances in other media or lore significance in stories. 
 
-You can press the red button with the die on it to generate a random Pokémon.
+You can press the button with the die on it to generate a random Pokémon.
 
-If your favorite Pokémon is displayed, you can press the yellow button to bookmark it. You can press the green button to recall the bookmark.
+If your favorite Pokémon is displayed, you can press the orange button to bookmark it. You can press the purple button to recall the bookmark.
 
 ## Roadmap
 In this section, we'll briefly discuss some of the challenges and successes with the project, as well as goals for the future. 
